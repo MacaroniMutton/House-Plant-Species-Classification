@@ -1,0 +1,4 @@
+venv/
+latest_version_venv/
+saved_model/
+resnet_model.keras

@@ -1,0 +1,7 @@
+tensorflow
+pillow
+tensorflow-serving-api
+matplotlib
+numpy
+flask
+requests

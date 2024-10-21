@@ -1,0 +1,15 @@
+To start tf serving
+
+docker pull tensorflow/serving
+
+docker run -p 8501:8501 --name=tf-serving --mount type=bind,source="C:/Users/Manan Kher/OneDrive/Documents/House_Plant_Species/saved_model",target=/models/house_plant_model -e MODEL_NAME=house_plant_model -t tensorflow/serving
+
+If it shows that container is already in use, then
+docker stop tf-serving
+docker rm tf-serving
+docker run -p 8501:8501 --name=tf-serving --mount type=bind,source="C:/Users/Manan Kher/OneDrive/Documents/House_Plant_Species/saved_model",target=/models/house_plant_model -e MODEL_NAME=house_plant_model -t tensorflow/serving
+
+Then start the flask server
+python main.py
+
+To test if the api is working, run api_tester.py
