@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('./assets/plants_wallpaper.jpg') no-repeat center center fixed; /* Replace with your background image URL */
+  background-size: cover;
+  color: #fff; /* Text color */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  backdrop-filter: blur(5px); /* Optional: Adds a blur effect behind the container */
+  padding: 0 20px; /* Added padding for smaller screens */
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.dropzone {
+  border: 2px dashed #4caf50; /* Green border */
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%; /* Set to 90% for responsiveness */
+  max-width: 300px; /* Set a max width */
+  height: 200px;
+  transition: background-color 0.3s ease;
+}
+
+.dropzone:hover {
+  background-color: rgba(76, 175, 80, 0.2); /* Light green on hover */
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Full width for button */
+  max-width: 150px; /* Set a max width for the button */
+}
+
+.button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.preview {
+  margin-top: 20px;
+  width: 100px !important; /* Fixed width for image preview */
+  height: 100px !important; /* Fixed height for image preview */
+  object-fit: cover !important; /* Ensures the image covers the area without stretching */
+  border-radius: 8px !important;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* Reduce font size for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Reduce font size for smaller screens */
+  }
+
+  .dropzone {
+    height: 150px; /* Reduce height for smaller screens */
+  }
+
+  .preview {
+    width: 80px !important; /* Smaller preview for mobile */
+    height: 80px !important; /* Smaller preview for mobile */
+  }
+
+  .button {
+    font-size: 1rem; /* Smaller button font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px; /* Less padding for very small screens */
+  }
+
+  h1 {
+    font-size: 2rem; /* Further reduce font size */
+  }
+
+  h2 {
+    font-size: 1rem; /* Further reduce font size */
+  }
+
+  .dropzone {
+    height: 120px; /* Further reduce height */
+  }
+
+  .preview {
+    width: 60px !important; /* Further reduce preview size */
+    height: 60px !important; /* Further reduce preview size */
+  }
+}

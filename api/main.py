@@ -78,9 +78,11 @@ import numpy as np
 import requests
 from flask import Flask, request, jsonify
 from PIL import Image
+from flask_cors import CORS
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)
 
 # Preprocessing function
 def preprocess_image(image, target_size=(224, 224)):
